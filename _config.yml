@@ -1,22 +1,83 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: Wagner Leonardi - Software Engineer
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hi, I'm Wagner, a description is comming!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.wagnerleonardi.com" # the base hostname & protocol for your site
-twitter_username: leonardiwagner
-github_username:  leonardiwagner
+# # # # # # # # # # # # #
+#   K i k o - p l u s   #
+# # # # # # # # # # # # #
 
-# Build settings
-markdown: kramdown
+# Basic
+name:               "Wagner Leonardi"
 
-# Outputting
-permalink:     /:title
+author:
+  twitter:          your-id
+  github:           your-id
+  stackoverflow:    your-id
+
+  linkedin:         your-id
+
+  email:            leonardiwagner@gmail.com
+
+copyright:
+  year:             2017
+  name:             Wagner Leonardi
+
+# Google-analytics
+google-analytics:
+  id:               "95146900"
+
+# Disqus
+disqus:
+  id:               "wagnerleonardi"
+
+# URL
+url:                "http://wagnerleonardi.com" # the base hostname & protocol for your site
+# url:                "http://localhost:4000" # use this url when you develop
+baseurl:            "" # the subpath of your site, e.g. /blog
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           America/Sao_Paulo
+permalink:          /:title/
+
+# Pagination
+paginate:           10
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+# Navigation
+nav:
+  - name:           "linkedin"
+    url:            "https://www.linkedin.com/in/wagner-leonardi-801aa179/"
+  - name:           "Github"
+    url:            "https://github.com/leonardiwagner"
+  - name:           "StackOverflow"
+    url:            "https://stackoverflow.com/users/1778285/wagner-leonardi"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:            [vendor]
