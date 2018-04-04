@@ -5,18 +5,19 @@
 
 # Basic
 name:               "Wagner Leonardi"
+title:               "Wagner Leonardi"
 
 author:
-  twitter:          your-id
-  github:           your-id
-  stackoverflow:    your-id
+  twitter:          leonardiwagner
+  github:           leonardiwagner
+  stackoverflow:    wagner-leonardi
 
-  linkedin:         your-id
+  linkedin:         wagner-leonardi-801aa179
 
   email:            leonardiwagner@gmail.com
 
 copyright:
-  year:             2017
+  year:             2018
   name:             Wagner Leonardi
 
 # Google-analytics
@@ -76,7 +77,7 @@ defaults:
       layout:       "post"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
