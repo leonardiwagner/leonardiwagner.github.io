@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "SOLID Programming in 10 minutes"
-description: "essential about solid programming"
+description: "All you should know about SOLID Programming"
 date: 2018-04-03
+image: /assets/images/solid.jpg
 tags: [solid, programming]
 comments: true
 share: true
