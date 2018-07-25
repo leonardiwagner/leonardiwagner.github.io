@@ -215,10 +215,10 @@ Replace `image` with your image name.
 
 Replace `image` with your image name. You can also combine this command with `--rm`
 
-**3.** We've used the command `COPY` in `Dockerfile` and it only copies files to container, but we can use Volumes to share files between the host (your computer) and container, this is awesome at development because we can make changes in host and it'll be automatically reflected inside container. Sadly we can't make it via `Dockerfile` (its VOLUME option doesn't behave as we want), but it's solved with volume flag `-v` when we run a container:
+**3.** We've used the command `COPY` in `Dockerfile` and it only copies files to container, but we can use Volumes to share files between the host (your computer) and container, this is awesome at development because we can make changes in host and it'll be automatically reflected inside container. Sadly we can't make it via `Dockerfile` (its VOLUME option doesn't behave the same), but it's solved with volume flag `-v` when we run a container:
 
-- `docker run -t -v ${PWD}:/path image`
+- `docker run -t -v ${PWD}:/path -e USERID=$UID image`
 
-replace `image` with your image name, and `path` with the same path of your `WORKDIR` described on `Dockerfile`. The `${PWD}` is a bash shortcut to your current path, if you are using Windows for eg. just write the whole path or use a equivalent command. You also combine other commands to enter inside this container, just take care if you remove something from this directory inside the container, it'll also be removed from your host computer!
+replace `image` with your image name, and `path` with the same path of your `WORKDIR` described on `Dockerfile`. The `${PWD}` is a bash shortcut to your current path, if you are using Windows for eg. just write the whole path or use a equivalent command. The `-e USERID=$UID` command is to run the container as your current user, without that docker will run as root by default and any file created inside the container would require root permission to modify. You also combine other commands to enter inside this container, just take care if you remove something from this directory inside the container, it'll also be removed from your host computer!
 
 That's all, hope you enjoyed! 😎
