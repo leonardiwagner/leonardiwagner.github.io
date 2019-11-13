@@ -1,0 +1,15 @@
+---
+layout: post
+title: "CI and CD in practice"
+description: "Start guide with Continuous Integration and Deployment"
+date: 2019-11-13
+image: /assets/images/solid.jpg
+tags: [continuous, integration, deployment]
+comments: true
+share: true
+---
+
+The first thing to do before starting coding a project is building the continuous deployment. Why? It doesn't matter how great you built a software if customers can't see it, also having an enviroment ready to all developers publish what they're doing for testing and early customer feedback is essential.
+
+First, you should create where you project will be hosted. I'm gonna use AWS S3
+
