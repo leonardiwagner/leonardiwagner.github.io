@@ -84,4 +84,4 @@ and the files being uploaded to your publishing environment:
 
 ![travis build](/assets/images/cd_travis_build2.png)
 
-This project code is here: [https://github.com/coding-tutorials/aws-front-end](https://github.com/coding-tutorials/aws-front-end)
+You can check project of this example here: [https://github.com/coding-tutorials/aws-front-end](https://github.com/coding-tutorials/aws-front-end), cya!
