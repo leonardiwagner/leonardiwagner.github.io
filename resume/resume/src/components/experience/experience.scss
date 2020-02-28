@@ -1,0 +1,13 @@
+.experience {
+  
+  text-align: left;
+
+  &__title {
+    display: flex;
+    
+    &__date {
+      font-size: 80%;
+      color: grey;
+    }
+  }
+}

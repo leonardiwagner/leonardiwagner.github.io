@@ -1,0 +1,24 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex: 1 1 auto;
+    margin: 0.2rem 0;
+    
+
+    &__title {
+      flex: 0 0 auto;
+    }
+
+    &__skills {
+      display:flex;
+      flex-wrap: 1;
+
+      font-size: 80%;
+    }
+  }
+}

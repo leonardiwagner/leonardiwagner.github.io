@@ -1,0 +1,43 @@
+.contact {
+  display: flex;
+ 
+  background-color: #444444;
+  color: white;
+
+  .picture {
+    flex: 0 0 14%;
+    margin: 0.2rem;
+    
+    img {
+      border-radius: 50%;
+      width: 100%;
+
+    }
+  }
+  
+  .info {
+    flex: 0 0 auto;
+    margin: 0 2rem;
+
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 200%;
+      padding: 0.5rem 0;
+    }
+
+    .items{
+      display: flex;
+      flex-wrap: wrap;
+  
+      div{
+        flex: 1 1 33%;
+        margin: 0.2rem 0;
+      }
+    } 
+  }
+}
+
