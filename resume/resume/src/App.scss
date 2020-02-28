@@ -1,0 +1,55 @@
+body {
+  font-family: 'Roboto', 'Fira Code';
+  background-color: red;
+}
+.app {
+  display: flex;
+
+
+  .left {
+    flex: 0 0 70%;
+  }
+  .right {
+    flex: 0 0 30%;
+  }
+}
+
+.title{
+  font-weight: bold;
+  font-size: 130%;
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.resume {
+  padding: 1rem;
+}
+.experiences{
+  margin: 1rem;
+}
+
+.education {
+  margin-top: 1rem;
+}
+
+
+.App{
+  width: 794px;
+  height: 1123px;
+  background-color: white;
+}
+
+.traits{
+  display: flex;
+  text-align: center;
+
+  .trait {
+    flex: 1 1 auto;
+    
+  }
+  .text{
+    &__title {
+      font-weight: bold;
+    }
+  }
+}

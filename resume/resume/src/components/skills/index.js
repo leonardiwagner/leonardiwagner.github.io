@@ -3,20 +3,37 @@ import './skills.scss'
 
 import Skill from '../skill'
 
-const Skills = ({ skills }) =>
- <div className="skills">
-   {
-      skills.map((skill) =>
-        <div className="skills__item">
-          <div className="skills__item__title">{skill.title}</div>
-          {/* <div className="skills__item__skills"> */}
-            {
-              skill.skills.map((skill) => <Skill title={skill.title} />)
-            }
-          {/* </div> */}
-        </div>
-      )
+const colors = [
+  {id: 0, color: 'yellow'},
+  {id: 1, color: 'green'},
+  {id: 2, color: 'red'},
+  {id: 3, color: 'blue'},
+  {id: 4, color: 'magenta'},
+  {id: 5, color: 'green'},
+  {id: 6, color: 'magenta'},
+]
 
-   }
- </div>
+const getSkillColor = ({ color }) => {
+  const result = colors.find(x => x.id === color)
+  return result && result.color
+}
+
+const Skills = ({ skills }) =>
+<div className="skills_box">
+  <div className="title">
+    Skills
+  </div>
+  <div className="skills">
+    {
+
+        skills.map((skill) => 
+    
+            skill.skills.map((skill) => <Skill title={skill.title} color={getSkillColor(skill)} />)
+
+        )
+
+    }
+  </div>
+</div>
+ 
 export default Skills;

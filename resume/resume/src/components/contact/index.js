@@ -11,20 +11,20 @@ const Contact = ({ contact }) =>
     <div className="name">
       Wagner Leonardi
     </div>
-    <div className="items">
-      <div>
+    <div className="items" >
+      <div className="a">
       📆 08/06/1989
       </div>
-      <div>
+      <div className="b">
       🇧🇷 Brazilian
       </div>
       <div>
       📞 +55 11 94828 3864
       </div>
-      <div>
+      <div className="a">
       ⚙ GitHub
       </div>
-      <div>
+      <div className="b">
       ⚙ StackOverflow
       </div>
       <div>

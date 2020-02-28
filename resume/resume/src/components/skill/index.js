@@ -1,9 +1,9 @@
 import React from 'react';
 import './skill.scss'
 
-const Skill = ({ title }) => 
- <div className="skill">
-   <div className="skill__text">
+const Skill = ({ title, color }) => 
+ <div className="skill" style={{backgroundColor: color}}>
+   <div className="skill__text" >
     { title }
    </div>
    {/* <div className="skill__value">

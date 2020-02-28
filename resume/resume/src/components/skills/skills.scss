@@ -1,7 +1,11 @@
+.skills_box {
+  margin-top: 1rem;
+}
 .skills {
+  
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  flex-wrap: wrap;
   &__item {
     display: flex;
     flex-wrap: wrap;

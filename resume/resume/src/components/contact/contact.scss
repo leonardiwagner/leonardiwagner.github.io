@@ -4,8 +4,9 @@
   background-color: #444444;
   color: white;
 
+
   .picture {
-    flex: 0 0 14%;
+    flex: 1 1 14%;
     margin: 0.2rem;
     
     img {
@@ -16,7 +17,7 @@
   }
   
   .info {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     margin: 0 2rem;
 
     align-self: center;
@@ -34,8 +35,15 @@
       flex-wrap: wrap;
   
       div{
-        flex: 1 1 33%;
+        flex: 1 1 40%;
         margin: 0.2rem 0;
+
+        &.a {
+          flex: 1 1 30%;
+        }
+        &.b {
+          flex: 1 1 30%;
+        }
       }
     } 
   }
