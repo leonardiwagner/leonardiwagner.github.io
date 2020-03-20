@@ -4,7 +4,7 @@ title: "Debian Unstable: is it the best Linux Distro?"
 description: "Why it can be better than Ubuntu or Arch for bleeding-edge users"
 date: 2020-03-19
 image: /assets/images/debian_unstable.jpg
-tags: [continuous-deployment, continuous-integration, aws, lambda]
+tags: [linux, infrastructure]
 comments: true
 share: true
 ---
