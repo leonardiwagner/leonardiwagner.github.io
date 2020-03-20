@@ -11,6 +11,7 @@ share: true
 
 # Debian Unstable (sid): Is it the best Linux Distro?
 
+![Why it can be better than Ubuntu or Arch for bleeding-edge users](/assets/images/debian_unstable.jpg)
 
 ## Why Debian Unstable over Debian Stable or Ubuntu?
 
