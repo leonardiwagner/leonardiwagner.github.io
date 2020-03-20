@@ -31,7 +31,7 @@ Don't get me wrong, Arch Linux has a fair community and people use their free ti
 
 No, the Unstable distro is actually very stable, you can use it daily for a year without any problem at all, just like any other major Linux distribution. The name "unstable" simply exists because it's less stable than the official Debian Stable release, that's all! Don't worry about the name. 
 
-I'm not saying there will never have any problem. I was using for more than a year as my main distro when I had an issue with dependencies that broke some apps. No Netflix session on that night! However, it was fixed when I updated again in the morning.
+I'm not saying there will never have any problem. I was using for more than a year as my main distro (even for working) when I had an issue with dependencies that broke some apps. No Netflix session on that night! However, it was fixed when I updated again in the morning.
 
 Using a rolling-release distro doesn't imply that you should update every day! My recommendation is to update only after you finished all your work and learn how to rollback a broken update.
 
