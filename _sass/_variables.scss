@@ -1,57 +1,51 @@
-/* SCSS Variables */
+// Fonts
+$base-font: 'Open Sans', sans-serif;
+$code-font: 'Menlo', 'Courier New', 'Monaco', 'Spoqa Han Sans', monospace;
 
-/*--------------
-  Font
-  -------------- */
-$base-font: 'Spoqa Han Sans', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
-$code-font: Menlo, 'Ubuntu Mono', Monaco, 'Spoqa Han Sans', monospace;
-$code-gist-font: Menlo, 'Ubuntu Mono', Monaco, 'Spoqa Han Sans', monospace;
+// Font sizes
+$base-font-size: 20px;
+$small-font-size: 85%;
 
-$base-font-size: 18px;
-$base-font-size-sm: 14px;
+$site-width: 840px;
 
-$mobile-font-size: 16px;
+$line-height: 1.6;
+$spacing: 1em;
 
-
-/*--------------
-  Color
-  -------------- */
-$base-color: $oc-gray-8;
-$base-lighten-color: $oc-gray-6;
-
-$background-color: $oc-white;
-$background-over-color: $oc-gray-1;
-
-$text-color: $oc-gray-8;
-$link-color: $oc-blue-8;
-$code-color: $oc-indigo-9;
-$code-background-color: $oc-gray-1;
-$table-border-color: $oc-gray-2;
-$table-background-color: $oc-gray-1;
-
-$divider-color: $oc-gray-1;
+$h1-size: 200%;
+$h2-size: 180%;
 
 
-/*--------------
-  List
-  -------------- */
 
-$li-bottom-space: 0.8em;
-$li-bullets-width: 1.7em;
-$li-line-height: 1.55;
+// Colors
+$base-color: #1A1A1D;
+$strong-color: #DE0046;
+$detail-color: #5E4105;
+$light-detail-color: #FFECC4;
+$light-detail-color-2: #CAD0FF;
+$link-color: #4E5BBA;
+$divider-color: black;
 
-$ul-bullets-font: inherit;
-$ul-bullets-font-size: 1.2em;
-$ul-bullets-font-line-height: 1.2;
-$ul-bullets-right-space: 0.65em;
+$table-border-color: $base-color;
+$table-background-color: $base-color;
 
-$ol-bullets-font: inherit;
-$ol-bullets-font-size: 1em;
-$ol-bullets-font-line-height: inherit;
-$ol-bullets-right-space: 0.65em;
 
-$li-child-size-ratio: 0.95;
+$footnote-link-border-color:$base-color;
+$footnote-link-background-over-color: $base-color;
 
-$dt-width: 180px;
-$dt-dd-space: 20px;
-$dd-position: $dt-width+$dt-dd-space
+$selection-color: $oc-black;
+$selection-background-color: $base-color;
+
+$pagination-color: $base-color;
+$pagination-over-color: $base-color;
+
+$tag-index-label-color: $base-color;
+$tag-index-label-background-color: $base-color;
+$tag-index-count-background-color: $base-color;
+
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

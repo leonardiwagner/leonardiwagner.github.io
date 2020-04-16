@@ -1,0 +1,31 @@
+<div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      <a href="{{ site.baseurl }}/" class="site-avatar">
+        {% if site.avatar %}
+        <img src="{{ site.avatar }}" />
+        {% endif %}
+      </a>
+      <a href="{{ site.baseurl }}/" class="site-info">
+        <h1 class="site-name">{{ site.name }}</h1>
+        <p class="site-description">{{ site.description }}</p>
+      </a>
+      <nav>
+        {% for nav in site.nav %}
+          {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+          <a href="{{ nav.url }}" target="_blank">
+            <img width="24" height="24" src="/assets/images/icons/{{ nav.name | downcase }}.svg" alt="{{ nav.name }}" />
+            {{ nav.name }}
+          </a>
+          {% else %}
+          <a href="{{ site.baseurl }}{{ nav.url }}">
+            <img width="24" height="24" src="/assets/images/icons/{{ nav.name | downcase }}.svg" alt="{{ nav.name }}" />
+            {{ nav.name }}
+          </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+    </header>
+  </div>
+</div>

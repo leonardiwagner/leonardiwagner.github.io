@@ -1,0 +1,679 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "open-color";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font;
+  color: $base-color;
+  line-height: $line-height;
+  background-color: $light-detail-color-2;
+}
+
+.container {  
+  background-color: white;
+
+  box-shadow: $base-color 0px 4px 6px;
+  margin: 0 auto;
+  //max-width: 95%;
+  max-width: $site-width;
+  padding: 0 ($spacing * 2);
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  color: $strong-color;
+
+  $line-height: 1.4;
+  margin-bottom: $spacing;
+  
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1, h2, h3, h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: $h1-size;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: $h2-size;
+}
+
+p {
+  line-height: $line-height;
+  color: $base-color;
+  margin-bottom: $spacing;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $divider-color;
+  margin: $spacing auto;
+}
+
+// Yeun's list style
+// https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
+
+ol, ul {
+  > li {
+    &:before {
+      position: absolute;
+      width: $spacing;
+      margin-left: -$spacing;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: right;
+    }
+  }
+}
+
+ul {
+  > li:before {
+    content: "\2022";
+    padding-right: $spacing;
+  }
+}
+
+ol {
+  counter-reset: section;
+
+  > li:before {
+    counter-increment: section;
+    content: counter(section) ".";
+    padding-right: $spacing;
+  }
+}
+
+ol, ul {
+  > li {
+    margin: 0 auto $spacing $spacing;
+
+    > ol,
+    > ul {
+      margin-top: $spacing;
+    }
+  }
+}
+
+li {
+  > ol,
+  > ul {
+    > li {
+      margin: 0 auto $spacing $spacing;
+    }
+  }
+}
+
+// Definition list
+dt {
+  float: left;
+  width: $spacing;
+  overflow: auto;
+  clear: left;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: $spacing;
+
+  @include mobile {
+    width: 120px;
+  }
+}
+
+dd {
+  margin-left: $spacing;
+  margin-bottom: $spacing;
+
+  @include mobile {
+    margin-left: 140px;
+  }
+}
+
+// Table
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid $table-border-color;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid $table-border-color;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $table-background-color;
+}
+
+// Blockquote
+blockquote {
+  font-weight: 300;
+  padding: $spacing;
+  margin: 0 $spacing $spacing 0;
+  border-left: .2em solid $detail-color;
+  background-color: $light-detail-color;
+
+  p {
+    // color: $link-color;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Footnote
+a.footnote {
+  &,
+  .post p &,
+  .post ol &,
+  .post ul & {
+    margin: 0 3px;
+    padding: 0 2px;
+    font-size: $small-font-size;
+    text-align: center;
+    border: 1px solid $footnote-link-border-color;
+    border-radius: 2px;
+    -webkit-text-stroke: 0.25px;
+    -webkit-transition: 0.2s ease-out all;
+    text-decoration: none;
+
+    &:hover {
+      background: $footnote-link-background-over-color;
+    }
+  }
+}
+
+.footnotes {
+  border-top: 1px solid $divider-color;
+  font-size: $small-font-size;
+}
+
+// Image
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $selection-color;
+  background: $selection-background-color;
+}
+::selection {
+  color: $selection-color;
+  background: $selection-background-color;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+// Alignment
+.center {
+  text-align: center;
+
+  &-image {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.right {
+  text-align: right
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  background-color: $base-color;
+  .container {
+    box-shadow: none;
+    background-color: $base-color;
+  }
+}
+
+.masthead {
+  @include mobile {
+    text-align: center;
+    flex-direction: column;
+    align-content: space-around;
+  }
+
+  padding: ($spacing / 2) 0;
+
+  font-family: 'Raleway';
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .site-avatar {
+    flex: 0 0 auto;
+
+    > div {
+      width: 100%;
+      width: 100%;
+    }
+    
+    display: flex;
+    align-content: center;
+
+    img {
+      width: 72px;
+      height: 72px;
+      background-color: $light-detail-color-2;
+      border-radius: 50%;
+      float: left;
+      margin: auto;
+    }
+    
+  }
+
+  .site-info {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-decoration: none;
+
+    h1 {
+      color: $light-detail-color;
+      font-size: $small-font-size * 1.5;
+    }
+
+    h1, p {
+      margin: $spacing / 4;
+      margin: 0;
+      margin-left: $spacing;
+    }
+
+    p {
+      font-size: $small-font-size;
+      text-align: center;
+      color: white;
+    }
+
+
+    @include mobile {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  nav {
+    flex: 1 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      flex: 0 0 auto;
+      color: white;
+      margin: 0 ($spacing / 2);
+
+      @include mobile {
+        margin: 0 10px;
+      }
+
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        
+        float: left;  
+        margin: 0;
+        margin-right: $spacing / 2;
+        filter: invert(1);
+      }
+    }
+
+    
+
+    @include mobile {
+      font-size: $small-font-size;
+    }
+  
+    
+  }
+
+  
+}
+
+
+// Posts
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  a {
+    display: flex;
+    flex: 0 0 48%;
+    border-radius: 3%;
+    padding: $spacing / 2;
+    &:hover {
+      background-color: $light-detail-color-2;
+      text-decoration: none;
+    }
+  }
+ 
+  .post {
+    h1 {
+      font-size: $base-font-size;
+      padding: ($spacing / 4) 0 ($spacing / 4) 0;
+    }
+
+    p {
+      font-size: $small-font-size;
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  .date {
+    float: right;
+  }
+}
+
+.post {
+  h1 {
+    line-height: 1.4;
+    padding-top: $spacing;
+    margin-bottom: 0;
+  }
+
+  .details {
+    font-size: $small-font-size;
+    margin: ($spacing / 2) 0;
+  }
+
+  img {
+    margin: auto;
+    width: 80%;
+    border:1px solid $detail-color;
+  }
+
+  img + em {
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: $small-font-size;
+    color: $detail-color;
+  }
+
+  .date {
+    font-weight: 300;
+    font-size: $small-font-size;
+    color: $link-color;
+    margin-right: 3px;
+  }
+
+  .tag {
+    display: inline;
+    font-weight: 300;
+    font-size: $small-font-size;
+
+    li:before {
+      content: '';
+    }
+
+    li {
+      display: inline;
+      margin: 0;
+
+      > a {
+        margin: 0 ($spacing /4);
+        padding: ($spacing /4) ($spacing /4);
+        color: white;
+        background-color: $link-color;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    font-size: 15px;
+  }
+}
+
+.share {
+  display: inline-flex;
+  float: right;
+  font-size: $small-font-size;
+
+  a{
+    border-radius: 50%;
+    margin: 0 ($spacing / 2);
+    padding: $spacing / 4;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    border: none;
+  }
+}
+
+.pagination {
+  font-weight: 300;
+  padding: 2em 0;
+  width: 100%;
+  display: inline-block;
+
+  @include mobile {
+    font-size: $small-font-size;
+  }
+
+  > .prev {
+    float: left;
+    width: 50%;
+    a {
+      color: $pagination-color;
+      &:hover, &:focus {
+        color: $pagination-over-color;
+      }
+    }
+  }
+
+  > .next {
+    float: right;
+    text-align: right;
+    width: 50%;
+    a {
+      color: $pagination-color;
+      &:hover, &:focus {
+        color: $pagination-over-color;
+      }
+    }
+  }
+}
+
+// Archive
+.archive {
+  a {
+    color: $base-color;
+  }
+  time {
+    color: $detail-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
+
+// Tags
+.tags > .label {
+  > li:before {
+    content: "";
+  }
+
+  > li {
+    margin: 0;
+    font-size: $small-font-size;
+    font-weight: 300;
+    display: inline;
+
+    > a {
+      display: inline-block;
+      margin: 1px;
+      color: $tag-index-label-color;
+      background-color: $tag-index-label-background-color;
+      border-radius: 3px;
+
+      span {
+        float: left;
+        padding: .5px 5px;
+
+        &.count {
+          background-color: $tag-index-count-background-color;
+          border-radius: 0 3px 3px 0;
+        }
+      }
+    }
+  }
+}
+
+.tags > .tag {
+  a {
+    color: $base-color;
+  }
+  time {
+    color: $detail-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
+
+// Footer
+.wrapper-footer {
+
+  .container {
+    background-color: $base-color;
+  }
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+
+  p {
+    font-size: $small-font-size;
+  }
+
+  .svg-icon {
+    display: block;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+
+    em {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: -.75em;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
